@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Overview MFE — Test Harness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<script type="importmap">
+  {
+    "imports": {
+      "react":                         "https://esm.sh/react@19.2.4",
+      "react-dom":                     "https://esm.sh/react-dom@19.2.4",
+      "react-dom/client":              "https://esm.sh/react-dom@19.2.4/client",
+      "react/jsx-dev-runtime":         "https://esm.sh/react@19.2.4/jsx-dev-runtime",
+      "react/jsx-runtime":             "https://esm.sh/react@19.2.4/jsx-runtime"
+    }
+  }
+</script>
+<div id="root"></div>
+<script type="module">
+  import { mount, unmount } from './overview.mjs';
+  const el = document.getElementById('root');
+  window.addEventListener('unload', () => unmount(el));
+  mount(el);
+</script>
+</body>
+</html>

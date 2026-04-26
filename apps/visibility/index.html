@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Visibility MFE — Dev Harness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html body {
+      font-family: FedExSans, Arial, sans-serif;
+      margin:0;
+      padding:0;
+    }
+
+    input, select, textarea, button {
+      font-family: inherit;
+    }
+
+    :root {
+      --button-height-comfortable: 3.5rem;
+      --button-height-condensed: 2.5rem;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────── */
+
+    body {
+      padding: 1.5rem;
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    body::before {
+      content: '⚠ TEST HARNESS — NOT FOR PRODUCTION';
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.4rem 1rem;
+      background: #7c2d12;
+      color: #fed7aa;
+      border: 1px solid #c2410c;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.1rem;
+      color: #a0a0a0;
+    }
+
+    #controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .test-btn {
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      border: 1px solid #555;
+      background: #2a2a2a;
+      color: #e0e0e0;
+    }
+
+    .test-btn:hover {
+      background: #3a3a3a;
+      border-color: #777;
+    }
+
+    .test-btn:focus-visible {
+      outline: 2px solid #fb923c;
+      outline-offset: 2px;
+    }
+
+    #root {
+      border: 2px dashed #444;
+      border-radius: 6px;
+      min-height: 120px;
+      padding: 1rem;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+<script type="importmap">
+  {
+    "imports": {
+      "react":                         "https://esm.sh/react@19.2.4",
+      "react-dom":                     "https://esm.sh/react-dom@19.2.4",
+      "react-dom/client":              "https://esm.sh/react-dom@19.2.4/client",
+      "react/jsx-dev-runtime":         "https://esm.sh/react@19.2.4/jsx-dev-runtime",
+      "react/jsx-runtime":             "https://esm.sh/react@19.2.4/jsx-runtime"
+    }
+  }
+</script>
+<div id="controls">
+  <button id="btn-mount" class="test-btn">Mount</button>
+  <button id="btn-unmount" class="test-btn">Unmount</button>
+</div>
+<div id="root"></div>
+<script type="module" src="src/main.tsx"></script>
+</body>
+</html>

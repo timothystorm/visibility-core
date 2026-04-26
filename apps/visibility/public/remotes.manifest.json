@@ -1,0 +1,10 @@
+{
+  "remotes": {
+    "monitor": {
+      "current": "http://localhost:4201/monitor.mjs"
+    },
+    "overview": {
+      "current": "http://localhost:4202/overview.mjs"
+    }
+  }
+}
