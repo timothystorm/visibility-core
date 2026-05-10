@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react';
 
-const LazyRemoteSlot = lazy(() =>
-  import('./remotes/RemoteSlot').then((m) => ({ default: m.RemoteSlot })),
-);
+const LazyRemoteSlot = lazy(() => import('./remotes/RemoteSlot').then((m) => ({ default: m.RemoteSlot })));
+
 export function App() {
   return (
     <>

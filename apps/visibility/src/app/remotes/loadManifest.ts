@@ -1,4 +1,4 @@
-import { RemoteManifest } from '../types/remoteManifest';
+import { RemoteManifest } from '../types/remotes';
 
 const manifestURL = import.meta.env.DEV
   ? new URLSearchParams(globalThis.location.search).get('manifest_url') ||
