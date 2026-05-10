@@ -1,5 +1,10 @@
 {
   "name": "@fedex/monitor",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^4.1.9",
+    "@fedex/context": "0.0.1",
+    "graphql": "^16.13.2"
+  }
 }

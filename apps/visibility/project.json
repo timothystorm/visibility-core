@@ -1,0 +1,17 @@
+{
+  "name": "@fedex/visibility",
+  "targets": {
+    "start-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx preview @fedex/monitor",
+          "nx preview @fedex/overview",
+          "nx serve @fedex/visibility"
+        ],
+        "parallel": true
+      }
+    }
+  }
+}
+

@@ -16,6 +16,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@fedex/source"]
+    "customConditions": ["@fedex/source"],
+    "baseUrl": ".",
+    "paths": {
+      "@fedex/context": ["packages/context/src/index.ts"],
+    }
   }
 }

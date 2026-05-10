@@ -11,6 +11,9 @@
     },
     {
       "path": "./apps/overview"
+    },
+    {
+      "path": "./packages/context"
     }
   ]
 }

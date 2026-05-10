@@ -1,5 +1,4 @@
-import { RemoteModule } from '../types/remoteModule';
-import { RemoteManifest } from '../types/remoteManifest';
+import { RemoteManifest, RemoteModule } from '../types/remotes';
 
 function resolveRemoteUrl(
   remoteName: string,

@@ -1,6 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import cssInjectedByJs from 'vite-plugin-css-injected-by-js';
 import { resolve } from 'path';
 import { fileURLToPath } from 'node:url';
 
@@ -19,7 +20,9 @@ export default defineConfig(({ command }) => {
     cacheDir: '../../node_modules/.vite/apps/monitor',
     server: hostSetup,
     preview: hostSetup,
-    plugins: [react()],
+    // inject css into the js bundle only when building as a lib so the shell
+    // doesn't need to load a separate css file when dynamically importing the MFE
+    plugins: [react(), ...(isLib ? [cssInjectedByJs()] : [])],
 
     resolve: {
       tsconfigPaths: true,

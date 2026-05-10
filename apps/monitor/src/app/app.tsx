@@ -1,5 +1,7 @@
+import TileGroup from './components/tile/TileGroup';
+
 export function App() {
-  return <h1>Monitor Shell</h1>;
+  return <TileGroup></TileGroup>;
 }
 
 export default App;
